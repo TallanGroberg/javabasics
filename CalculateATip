@@ -1,0 +1,8 @@
+run:
+enter the bill amount.
+98
+ 
+gratuity: $17.64
+ 
+Total: $115.64
+BUILD SUCCESSFUL (total time: 4 seconds)
