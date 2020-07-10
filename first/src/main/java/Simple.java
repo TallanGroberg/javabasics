@@ -8,10 +8,45 @@
  *
  * @author tallan
  */
+
+import java.util.*;
+
+import javax.swing.JFrame;
+
 public class Simple 
 {
-    public static void main(String[] args)
+    public static <Keyboard> void main(String[] args)
     {
-        System.out.printf("city %s", 13)
+         int x = 1;
+         int a = 3;
+         int b = 4;
+
+        if (a < b)
+
+        {
+
+                    while ( a <= 30 )
+
+                    {
+
+                                a = a * 10;
+
+                                x = x + 5;
+
+                    }
+
+                    System.out.println( x + " " );
+
+                    System.out.println( a );
+
+        }
+
+        else
+
+        {
+
+                    System.out.println("I better find a new career");
+
+        }
     }
 }
