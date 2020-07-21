@@ -27,9 +27,11 @@ public class SelectionsAndLooping
         count = input.nextInt();
         System.out.println("Below are all the numbers that are evenly divisible by " + count + " from 1 up to " + n);
 
-        for (int i = 0; i < n; i++) 
+        for (int i = 0; i < n; count = i++) 
         {
-            if(i % count == 0) System.out.print(i + " ");
+            if(count == i && i == count)
+            continue;
+             System.out.print(i + " ");
         }
         System.out.println();
     }

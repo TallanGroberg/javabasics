@@ -172,12 +172,6 @@ public class ArrayStudentData {
                 // System.out.println(tieCount);
             }
         }
-
-        
-       
-        
-        
-        
     }
     
 }
