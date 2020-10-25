@@ -26,43 +26,45 @@ public class Exercise12 {
         
         // TODO code application logic here
 
+        String[] names = {
+            "Liam",
+            "Olivia",
+            "Noah",
+            "Emma",
+            "Oliver",
+            "Ava",
+            "William",
+            "Sophia",
+            "Elijah",
+            "Isabella",
+            "James",
+            "Charlotte",
+            "Benjamin",
+            "Amelia",
+            "Lucas",
+            "Mia",
+            "Mason",
+            "Harper",
+            "Ethan",
+            "Evelyn"
+        };
+            
+            
+            
 
-
-        String answer;
-        do 
-        {
-
+            for (int i = 0; i < names.length; i++) {
+                payroll.writeWord(names[i]);
+                payroll.writeDouble( random());
+                payroll.writeDouble( random());
+                payroll.writeEOL();
+            }
             String name, payRate, hours;
-            
-            
-            // name = JOptionPane.showInputDialog("Employee name");
-            // payroll.writeWord(name);
-            
-            // payRate = JOptionPane.showInputDialog("hourly pay?");;
-            // payroll.writeWord(payRate);
-            
-            // hours = JOptionPane.showInputDialog("hours worked?");;
-            // payroll.writeWord(hours);
-            // payroll.writeEOL();
-            // ;
-            // answer = JOptionPane.showInputDialog("do you have another employee (yes/no)");
-        } while(answer.equalsIgnoreCase("yes"));
-            
-            
             payroll.close();
-            
+        }
 
-
-
-           
-
-
-        
-            
-            
-
-
-        
+        public static int random() {
+            int rando = (int) Math.round(Math.random() * 100);
+            return rando;
     }
     
     
