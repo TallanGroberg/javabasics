@@ -1,6 +1,6 @@
-Manifest-Version: 1.0
-X-COMMENT: Main-Class will be added automatically by build
-
+"Liam" 29 81 
+"Olivia" 59 83 
+"Noah" 55 44 
 "Emma" 27 4 
 "Oliver" 5 2 
 "Ava" 87 54 
