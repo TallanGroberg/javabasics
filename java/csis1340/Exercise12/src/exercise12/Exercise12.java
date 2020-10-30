@@ -53,7 +53,7 @@ public class Exercise12 {
             
 
             for (int i = 0; i < names.length; i++) {
-                payroll.writeWord(names[i]);
+                payroll.writeWord("'" + names[i] + "'");
                 payroll.writeDouble( random());
                 payroll.writeDouble( random());
                 payroll.writeEOL();
