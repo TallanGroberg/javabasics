@@ -8,6 +8,7 @@ package spacelysprockets;
 import java.util.*;
 import java.util.regex.*;
 
+
 /**
  *
  * @author tallan
@@ -37,9 +38,11 @@ public class SpacelySprockets {
         System.arraycopy(numsAdd1,0,allNums,quantityAdd1.length, numsAdd1.length);
         
 
+        HashMap<Integer, Integer> orders = new HashMap<Integer, Integer>();
+        
 
         
-      
+
 
 
 
@@ -59,7 +62,9 @@ public class SpacelySprockets {
 
             while(matcher.find())
             {
-
+                
+                
+                
                 if(count % 2 != 0) {
                     
                     numsAdd1[nums.length] = Integer.parseInt(matcher.group());
@@ -70,18 +75,22 @@ public class SpacelySprockets {
                     System.out.print("    " +  quantityAdd1[quantity.length]);
                     System.out.println();
                 }
+                
+                
+                String even = Integer.toString(numsAdd1[nums.length]); 
+                String odd = Integer.toString(quantityAdd1[quantity.length]);
+
+                
 
 
+                orders.put(numsAdd1[nums.length], quantityAdd1[quantity.length]);
                 count++;
                 
             }
-        
+            
         }
-        for (int i = 0; i < numsAdd1.length; i++) 
-        {
-           
-            }
-        }
+
+        System.out.println(orders);
     }
     
 }
