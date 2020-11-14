@@ -1,4 +1,4 @@
-package spacelysprockets;
+package amortization;
 
 public class InputFile extends Keyboard
 {

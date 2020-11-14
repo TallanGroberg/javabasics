@@ -1,4 +1,4 @@
-package spacelysprockets;
+package amortization;
 
 import java.io.*;
 /**
