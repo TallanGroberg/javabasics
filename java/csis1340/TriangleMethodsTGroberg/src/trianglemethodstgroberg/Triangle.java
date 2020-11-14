@@ -1,21 +1,20 @@
 package trianglemethodstgroberg;
 
+import java.util.Arrays;
+
 class Triangle {
 
 
-    public String convertToInt(String a ,String b,String c) {
-        int a_int, b_int, c_int;
-        a_int = Integer.parseInt(a);
-        b_int = Integer.parseInt(b);
-        c_int = Integer.parseInt(c);
-        return triangleType(a_int, b_int, c_int);
-    }
+    public String triangleType(int[] triangleSides) {
+        int a, b, c;
+        a = triangleSides[0];
+        b = triangleSides[1];
+        c = triangleSides[2];
 
-    public String triangleType(int a, int b, int c) {
-        if(a == b && b == c) {
+        if(a == c ) {
             return equalateral();
-        } else if(a == b || b == c || c == a) {
-                return isosolise();
+        } else if(a == b || b == c) {
+                return isosolise() ;
         } else {
             return scalene();
         }
@@ -30,6 +29,23 @@ class Triangle {
     public String scalene() {
         return "Scalene";
     }
+
+    public String sortSides(int a, int b, int c) {
+        int[] triangleSides = {a,b,c};
+        System.out.println( a + " " + b + " " + c);
+        Arrays.sort(triangleSides);
+       
+
+        int[] acending = {a,b,c};
+        
+        if(a + b >= c) {
+            return triangleType(acending);
+        } else {
+            return "Not a triangle, the longest side is longer than the shorter sides added together";
+        }
+    }
+
+
 
 
 
