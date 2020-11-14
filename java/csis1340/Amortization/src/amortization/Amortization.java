@@ -15,22 +15,24 @@ import java.util.regex.*;
  *
  * @author tallan
  */
-public class Amortization extends WindowMaker {
+public class Amortization extends Header {
 
     /**
      * @param args the command line arguments
      */
+
+
     public static void main(String[] args) {
         makeWindow();
         // TODO code application logic here
         InputFile data = new InputFile("data.txt");
         InputFile cleanedUpFile = new InputFile("withoutQuotes.txt");
-        String[] words = readingHandler(data);
-        String[] cleanedWords = readingHandler(cleanedUpFile);
+        String[] words = readingOneLineHandler(data);
+        String[] cleanedWords = readingOneLineHandler(cleanedUpFile);
         
-
-        cleanIt("withOutQuotes", cleanedWords);
-        separatePeople(cleanedWords);
+        heading();
+        // cleanIt("withOutQuotes", cleanedWords);
+        // separatePeople(cleanedWords);
         
         
         
