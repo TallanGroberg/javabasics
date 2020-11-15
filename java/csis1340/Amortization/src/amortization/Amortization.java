@@ -15,7 +15,7 @@ import java.util.regex.*;
  *
  * @author tallan
  */
-public class Amortization extends Header {
+public class Amortization extends Table {
 
     /**
      * @param args the command line arguments
@@ -31,6 +31,8 @@ public class Amortization extends Header {
         String[] cleanedWords = readingOneLineHandler(cleanedUpFile);
         
         heading();
+        table();
+        calculatePayments();
         // cleanIt("withOutQuotes", cleanedWords);
         // separatePeople(cleanedWords);
         

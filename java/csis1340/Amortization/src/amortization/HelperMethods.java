@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class HelperMethods {
+public class HelperMethods extends Dates {
     public static String checkDoubleQuotes(String word) {
         String[] letters = word.split("");
         String s = "";
@@ -79,7 +79,8 @@ public class HelperMethods {
         String[] strArr = string.split("");
             strArr = Arrays.copyOf(strArr, strArr.length - 1);
             for (String s : strArr) str = str + s;
-            
+
         return str;
     }
+
 }
