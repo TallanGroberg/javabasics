@@ -17,13 +17,37 @@ public class UserInputTallanGroberg {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        String name;
-        Keyboard k;
-        k = new Keyboard();
-        System.out.println("please enter your name");
-        name = k.readLine();
+        int a = 3;
+        int b = 4;
+        int x = 1;
         
-        System.out.println("Hi there " + name);
+          if (a < b)
+
+            {
+
+                        while ( a <= 30 )
+
+                        {
+
+                                    a = a * 10;
+
+                                    x = x + 5;
+
+                        }
+
+                        System.out.print( x + " " );
+
+                        System.out.print( a );
+
+            }
+
+            else
+
+            {
+
+                        System.out.println("I better find a new career");
+
+            }
 
 
 

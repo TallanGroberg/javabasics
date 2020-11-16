@@ -5,53 +5,37 @@
  */
 package amortization;
 
+import amortization.WindowMaker;
+import java.util.regex.*;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
-import amortization.WindowMaker;
-import java.util.regex.*; 
 
 /**
  *
  * @author tallan
  */
-public class Amortization extends Table {
+public class Amortization extends Table 
+{
 
-    /**
-     * @param args the command line arguments
-     */
+  /**
+   * @param args the command line arguments
+   */
 
+  public static void main(String[] args) 
+  {
+    makeWindow();
+    // TODO code application logic here
+    InputFile data = new InputFile("data.txt");
+    InputFile cleanedUpFile = new InputFile("withoutQuotes.txt");
+    String[] words = readingOneLineHandler(data);
+    String[] cleanedWords = readingOneLineHandler(cleanedUpFile);
 
-    public static void main(String[] args) {
-        makeWindow();
-        // TODO code application logic here
-        InputFile data = new InputFile("data.txt");
-        InputFile cleanedUpFile = new InputFile("withoutQuotes.txt");
-        String[] words = readingOneLineHandler(data);
-        String[] cleanedWords = readingOneLineHandler(cleanedUpFile);
-        
-        heading();
-        table();
-        calculatePayments();
-        // cleanIt("withOutQuotes", cleanedWords);
-        // separatePeople(cleanedWords);
-        
-        
-        
-    }
+    cleanIt("withOutQuotes", cleanedWords);
+    separatePeople(cleanedWords);
 
-    public static String readIt( String[] words) {
-        for (int i = 0; i < words.length; i++) {
-
-            words[i] = words[i].replaceAll("[^\\w]", " ");
-               append(Integer.toString(i) + " ");
-               append(words[i] + "\n");
-            }
-            
-
-        return "";
-    }
-
-    
-    
+    heading();
+    table();
+    calculatePayments();
+  }
 }
