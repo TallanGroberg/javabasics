@@ -1,52 +1,44 @@
 package amortization;
 
 import java.text.DecimalFormat;
-import java.text.SimpleDateFormat;
-import java.util.Locale;
 
-//get a date format form the file.
-public class Table extends Header 
-{
-  private static String loanAmount;
+public class Mary extends Table {
+    
+    private static String loanAmount;
   private static String loanApr;
   static double interest;
   static double apr;
   static double amount;
   static int paymentNumber;
   private static double payment;
-  static InputFile bill = new InputFile("bill.txt");
-  static String[] billsInfo = readingHandler(bill);
+  static InputFile mary = new InputFile("mary.txt");
+  static String[] maryInfo = readingHandler(mary);
 
-  static String sMonth = removeWhiteSpace(billsInfo[billsInfo.length - 1]);
+  static String sMonth = removeWhiteSpace(maryInfo[maryInfo.length - 1]);
   static int month = (int) Double.parseDouble(sMonth);
 
-  static String sYear = removeWhiteSpace(billsInfo[billsInfo.length - 4]);
+  static String sYear = removeWhiteSpace(maryInfo[maryInfo.length - 4]);
   static int year = (int) Double.parseDouble(sYear);
 
   static double principal;
 
-  protected static String table() 
-  {
-    loanAmount = billsInfo[12];
+  public static String mary() {
+    loanAmount = maryInfo[maryInfo.length -3];
     loanAmount = removeWhiteSpace(loanAmount);
     amount = Double.parseDouble(loanAmount);
-
-    loanApr = billsInfo[13];
+    
+    loanApr = maryInfo[maryInfo.length -2];
+    
     loanApr = removeWhiteSpace(loanApr);
     apr = Double.parseDouble(loanApr);
+    System.out.println(apr);
     double aprPercent = apr * 100;
     append("\n");
 
-    return "";
-  }
-
-  public static double calculatePayments() 
-  {
     DecimalFormat df = new DecimalFormat();
     df.setMaximumFractionDigits(2);
     double accumulatedInterest = 0;
     double total = amount;
-    String sMonth;
 
     paymentNumber = 1;
     append(
@@ -58,6 +50,11 @@ public class Table extends Header
       "\tbalance" +
       "\n"
     );
+
+
+
+
+
     while (amount >= 75) 
     {
       if (month >= 12) 
@@ -103,11 +100,11 @@ public class Table extends Header
       " \tAccumulated Interest: " +
       df.format(accumulatedInterest)
     );
-    return 0.0;
-  }
 
-  public static String mary() {
-    
+
+
     return "";
   }
+
+ 
 }

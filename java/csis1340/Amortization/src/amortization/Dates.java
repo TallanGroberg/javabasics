@@ -9,7 +9,7 @@ public class Dates
         String sMonth;
         switch (month) 
         {
-            case 0:
+            case 1:
                 sMonth = "january";
                 break; 
             case 2:

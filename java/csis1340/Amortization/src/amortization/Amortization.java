@@ -15,7 +15,7 @@ import javax.swing.JTextArea;
  *
  * @author tallan
  */
-public class Amortization extends Table 
+public class Amortization extends Mary 
 {
 
   /**
@@ -37,5 +37,6 @@ public class Amortization extends Table
     heading();
     table();
     calculatePayments();
+    mary();
   }
 }
